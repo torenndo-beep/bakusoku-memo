@@ -47,3 +47,10 @@ textarea {
     </script>
 </body>
 </html>
+<script>
+  const textarea = document.getElementById("memo");
+  textarea.value = localStorage.getItem("memo") || "";
+  textarea.addEventListener("input", () => {
+    localStorage.setItem("memo", textarea.value);
+  });
+</script>
